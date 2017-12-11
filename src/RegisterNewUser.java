@@ -3,7 +3,6 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.nio.charset.StandardCharsets;
 
-
 public class RegisterNewUser {
     private DBConnect connect;
     public RegisterNewUser(String userName, String password, String email){
@@ -35,10 +34,8 @@ public class RegisterNewUser {
         } catch (NoSuchAlgorithmException err) {
             err.getStackTrace();
         }
-
-
         String sqlInsertStatement = "INSERT INTO " + table + "(username, password, email, wallet, bank, bullets) " +
-                                        "VALUES ('" + newUserName + "', '" + sha256hex + "', '" + email + "', 10000, 0, 0 );";
+                                    "VALUES ('" + newUserName + "', '" + sha256hex + "', '" + email + "', 10000, 0, 0 );";
         connect.insertStatement(sqlInsertStatement);
     }
 }
