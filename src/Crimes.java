@@ -11,11 +11,6 @@ public class Crimes {
         return randHackCrime.getRandomValue();
     }
 
-    public Car remoteStealCar(){
-        Car car = new Car();
-        return car;
-    }
-
     public void setMaxMinRandHackCrime(int randMin, int randMax){
         randHackCrime.setMin(randMin);
         randHackCrime.setMax(randMax);

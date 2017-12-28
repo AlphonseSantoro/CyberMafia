@@ -1,36 +1,42 @@
+import org.jasypt.encryption.pbe.StandardPBEStringEncryptor;
+import org.jasypt.properties.EncryptableProperties;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.sql.*;
+import java.util.Properties;
 
 public class DBConnect {
-
-    private String host, uName, uPass, table, sqlUpdateStatement;
     private Connection con;
+    private ResultSet rs;
 
-    public DBConnect(String uName, String uPass){
+    public DBConnect(){
 
         try {
-            String host = "jdbc:mysql://localhost:3306/CyberMafia?allowPublicKeyRetrieval=true";
-            //String uName = "MafiaUser";
-            //String uPass = "1234";
-            // Initialize a connection to the database
+            StandardPBEStringEncryptor encryptor = new StandardPBEStringEncryptor();
+            encryptor.setPassword("DTpu9662");
+            Properties prop = new EncryptableProperties(encryptor);
+            prop.load(new FileInputStream("data\\cyberMafia.properties"));
+            String host = prop.getProperty("dataSource.host");
+            String uName = prop.getProperty("dataSource.username");
+            String uPass = prop.getProperty("dataSource.password");
             con = DriverManager.getConnection(host, uName, uPass);
-
-            /*  SELECT STATEMENT!!!
-            Statement stmt = con.createStatement();
-            String sql = "SELECT * FROM Cars";
-            rs = stmt.executeQuery(sql);
-            while(rs.next()){
-                String carID = rs.getString("carID");
-                String carName = rs.getString("carName");
-                String tier = rs.getString("tier");
-                String carMinValue = rs.getString("carMinValue");
-                String carMaxValue = rs.getString("carMaxValue");
-
-                System.out.println(carID + " " + carName + " " + tier + " " + carMinValue + " " + carMaxValue);
-            }
-            */
+        } catch (IOException err) {
+            System.out.println(err.getMessage());
         } catch (SQLException err) {
             System.out.println(err.getMessage());
         }
+    }
+
+    public ResultSet selectStatement(String sqlSelectStatement){
+        try {
+            PreparedStatement selectStatement = con.prepareStatement(sqlSelectStatement);
+            rs = selectStatement.executeQuery();
+        } catch (SQLException err){
+            System.out.println(err.getMessage());
+        }
+        return rs;
     }
 
     public void insertStatement(String sqlInsertStatement){

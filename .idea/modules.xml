@@ -5,4 +5,10 @@
       <module fileurl="file://$PROJECT_DIR$/CyberMafia.iml" filepath="$PROJECT_DIR$/CyberMafia.iml" />
     </modules>
   </component>
+  <dependency>
+      <groupId>org.jasypt</groupId>
+      <artifactId>jasypt</artifactId>
+      <version>4</version>
+      <scope>compile</scope>
+    </dependency>
 </project>

@@ -6,9 +6,9 @@ public class Player {
     DBConnect connect;
 
     public Player(){
-        userName = "TestUser";
-        password = "8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92";
-        connect = new DBConnect(userName, password);
+        userName = "";
+        password = "";
+        connect = new DBConnect();
     }
 
     public void deposit(int value){
