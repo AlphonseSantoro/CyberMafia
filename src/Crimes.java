@@ -4,15 +4,11 @@ public class Crimes {
     private RandomValue randHackCrime;
 
     public Crimes(int randMin, int randMax){
-        this.randHackCrime = new RandomValue(randMin, randMax);
+        this.randMin = randMin;
+        this.randMax = randMax;
     }
 
-    public int hackBankAccount(){
-        return randHackCrime.getRandomValue();
-    }
-
-    public void setMaxMinRandHackCrime(int randMin, int randMax){
-        randHackCrime.setMin(randMin);
-        randHackCrime.setMax(randMax);
+    public int executeCrime(){
+        return randHackCrime.getRandomValue(randMin, randMax);
     }
 }

@@ -42,6 +42,6 @@ public class Player {
     }
 
     public void performCrime(){
-        cash += crime.hackBankAccount();
+        cash += crime.executeCrime();
     }
 }

@@ -15,7 +15,7 @@ public class DBConnect {
 
         try {
             StandardPBEStringEncryptor encryptor = new StandardPBEStringEncryptor();
-            encryptor.setPassword("DTpu9662");
+            encryptor.setPassword("");
             Properties prop = new EncryptableProperties(encryptor);
             prop.load(new FileInputStream("data\\cyberMafia.properties"));
             String host = prop.getProperty("dataSource.host");

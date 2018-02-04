@@ -14,10 +14,10 @@ public class UserHandling {
 
     /**
      * Constructor to create a new user.
-     * @param userName
-     * @param password
-     * @param email
-     * @param ip
+     * @param userName A unique username for identification
+     * @param password The new users password
+     * @param email The new users email
+     * @param ip The users in-game IP
      */
     public UserHandling(String userName, String password, String email, String ip){
         connect = new DBConnect();
