@@ -15,7 +15,7 @@ public class Player {
         String table = "Player";
         String sqlUpdateStatement = "UPDATE " + table +
                 "SET bank = bank + " + value + ", wallet - " + value + " WHERE userName = '" + userName + "';";
-        connect.updateStatement(sqlUpdateStatement);
+        connect.executeStatement(sqlUpdateStatement);
     }
 
     public void depositAll(){

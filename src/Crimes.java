@@ -1,5 +1,5 @@
 
-public class Crimes {
+public class Crimes{
     private int cash, randMin, randMax;
     private RandomValue randHackCrime;
 

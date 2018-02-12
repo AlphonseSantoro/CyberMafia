@@ -1,9 +1,11 @@
 import org.jasypt.util.text.BasicTextEncryptor;
 
+import javax.xml.transform.Result;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.nio.charset.StandardCharsets;
 import java.security.SecureRandom;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Random;
@@ -25,14 +27,12 @@ public class UserHandling {
     }
 
     /**
-     * Constructor for log in validation
-     * @param userName
-     * @param givenPass
+     * Construct a connection to DB
      */
-    public UserHandling(String userName, String givenPass){
+    public UserHandling(){
         connect = new DBConnect();
-        validateUser(userName, givenPass);
     }
+
 
     /**
      * Get a random 16 byte salt.
@@ -66,7 +66,8 @@ public class UserHandling {
      * @return
      */
     public boolean validateUser(String userName, String passWord){
-        ResultSet rs = connect.selectStatement("SELECT password, salt FROM User WHERE username = '" + userName + "';");
+        ResultSet rs = DBConnect.selectStatement("SELECT password, salt FROM User WHERE username = '" + userName + "';");
+
         String dbPass = "";
         String salt = "";
         try {
@@ -119,9 +120,9 @@ public class UserHandling {
         String sha256hex = hashString(password, salt);
         String userInsertStatement = "INSERT INTO User (username, password, salt, email) " +
                                      "VALUES ('" + newUserName + "', '" + sha256hex + "', '" + salt + "', '" + email + "');";
-        connect.insertStatement(userInsertStatement);
+        connect.executeStatement(userInsertStatement);
         String playerInsertStatement = "INSERT INTO Player (username, playerIP, pc_CPU_ID, pc_GPU_ID, pc_HDD_ID)" +
                              "VALUES ('" + newUserName + "', '" + ip + "', 1, 1, 1);";
-        connect.insertStatement(playerInsertStatement);
+        connect.executeStatement(playerInsertStatement);
     }
 }
