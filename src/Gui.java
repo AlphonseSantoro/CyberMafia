@@ -19,12 +19,17 @@ public class Gui extends Application {
     private UserHandling user;
     private Scene mainGame, loginScene;
     private GridPane logInLayout, mainGameLayout;
+    private String host;
+    private int port;
 
     public Gui(){
 
     }
     @Override
     public void start(Stage primaryStage) {
+        host = main.getHost();
+        port = main.getPort();
+
         // Setup primary stage
         primaryStage.setTitle("CyberMafia");
 
@@ -71,12 +76,18 @@ public class Gui extends Application {
         Button login = new Button("LogIn");
         System.out.println(usernameField.getText() + " " + passwordField.getText());
         login.setOnAction(e -> {
+            Server server = new Server();
+            boolean loginValidation = server.validateUser(host, port, usernameField.getText(), passwordField.getText());
+            if(loginValidation){
+                System.out.println("From server: Access Granted");
+            }
+            /*
             user = new UserHandling();
             if (user.validateUser(usernameField.getText(), passwordField.getText())) {
                 primaryStage.setScene(mainGame);
             } else {
                 showAlertBox("Log In", "Wrong username or password");
-            }
+            } */
         });
 
         // Add elements to grid
