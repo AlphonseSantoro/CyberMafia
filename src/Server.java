@@ -19,14 +19,12 @@ public class Server {
                 PrintWriter out = new PrintWriter(serverSocket.getOutputStream(), true);
                 BufferedReader in = new BufferedReader(new InputStreamReader(serverSocket.getInputStream()))
         ){
-            BufferedReader stdIn = new BufferedReader(new InputStreamReader(System.in));
+            //BufferedReader stdIn = new BufferedReader(new InputStreamReader(System.in));
             String fromServer = in.readLine();
-            String fromUser;
             System.out.println("From Server: " + fromServer);
             out.println(username);
             out.println(password);
             if(in.readLine().equals("true")){
-                System.out.println("Access granted");
                 return true;
             } else {
                 return false;

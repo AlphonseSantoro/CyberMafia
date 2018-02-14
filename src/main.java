@@ -10,8 +10,8 @@ import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 public class main {
-    public static String host;
-    public static int port;
+    private static String host;
+    private static int port;
 
     public static void main(String[] args){
         host = args[0];
