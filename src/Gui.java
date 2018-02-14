@@ -26,6 +26,7 @@ public class Gui extends Application {
         registerScene = getRegisterScene(primaryStage, createGridPane(10, 10, Pos.CENTER), getBorderPane());
         // TODO: mainGameScene = getMainGameScene();
 
+
         // Setup primary stage with login scene
         primaryStage.setTitle("CyberMafia");
         primaryStage.setScene(logInScene);
