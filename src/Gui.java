@@ -85,10 +85,8 @@ public class Gui extends Application {
         login.setOnAction(e -> {
             Server server = new Server();
             boolean loginValidation = server.validateUser(host, port, usernameField.getText(), passwordField.getText());
-            if(loginValidation){
-                System.out.println("From server: Access Granted");
-            }
             if (loginValidation) {
+                System.out.println("From server: Access Granted");
                 primaryStage.setScene(mainGameScene);
             } else {
                 showAlertBox("Log In", "Wrong username or password");

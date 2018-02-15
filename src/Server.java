@@ -1,7 +1,4 @@
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.PrintWriter;
+import java.io.*;
 import java.net.Socket;
 
 public class Server {
@@ -12,18 +9,35 @@ public class Server {
 
     }
 
-    public boolean validateUser(String host, int portNumber, String username, String password){
-        String hostName = host;
+    public void sendSqlStatementObject(String host, int portNumber, UserHandling object){
         try (
-                Socket serverSocket = new Socket(hostName, portNumber);
+                Socket serverSocket = new Socket(host, portNumber);
+                PrintWriter out = new PrintWriter(serverSocket.getOutputStream(), true);
+                BufferedReader in = new BufferedReader(new InputStreamReader(serverSocket.getInputStream()));
+                ObjectInputStream objIn = new ObjectInputStream(serverSocket.getInputStream());
+                ObjectOutputStream objOut = new ObjectOutputStream(serverSocket.getOutputStream())
+        ){
+            String fromServer = in.readLine();
+            System.out.println("From Server: " + fromServer);
+            objOut.writeObject(object);
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public boolean validateUser(String host, int portNumber, String username, String password){
+        try (
+                Socket serverSocket = new Socket(host, portNumber);
                 PrintWriter out = new PrintWriter(serverSocket.getOutputStream(), true);
                 BufferedReader in = new BufferedReader(new InputStreamReader(serverSocket.getInputStream()))
         ){
             //BufferedReader stdIn = new BufferedReader(new InputStreamReader(System.in));
             String fromServer = in.readLine();
             System.out.println("From Server: " + fromServer);
-            out.println(username);
-            out.println(password);
+
+            //out.println(username);
+            //out.println(password);
             if(in.readLine().equals("true")){
                 return true;
             } else {
