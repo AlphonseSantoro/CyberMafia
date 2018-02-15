@@ -6,9 +6,12 @@ import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.*;
+import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
 import javafx.scene.text.TextAlignment;
 import javafx.stage.Stage;
+
+import java.io.IOException;
 
 public class Gui extends Application {
     GridPane gridPane;
@@ -83,11 +86,17 @@ public class Gui extends Application {
         Button login = new Button("LogIn");
         System.out.println(usernameField.getText() + " " + passwordField.getText());
         login.setOnAction(e -> {
-            Server server = new Server();
+            Server server = null;
+            try {
+                server = new Server(host, port);
+            } catch (IOException e1) {
+                e1.printStackTrace();
+            }
             boolean loginValidation = server.validateUser(host, port, usernameField.getText(), passwordField.getText());
             if (loginValidation) {
                 System.out.println("From server: Access Granted");
-                primaryStage.setScene(mainGameScene);
+                showAlertBox("Success", "Log in successful");
+                //primaryStage.setScene(mainGameScene);
             } else {
                 showAlertBox("Log In", "Wrong username or password");
             }
@@ -111,6 +120,7 @@ public class Gui extends Application {
         Text usernameText = new Text("Username:");
         Text passwordText = new Text("Password:");
         Text confirmPasswordText = new Text("Confirm password:");
+        Text emailText = new Text("Email:");
 
         //Create text boxes
         TextField username = new TextField();
@@ -119,6 +129,8 @@ public class Gui extends Application {
         password.setMaxSize(120, 20);
         TextField confirmPassword = new TextField();
         confirmPassword.setMaxSize(120, 20);
+        TextField email = new TextField();
+        email.setMaxSize(120, 20);
 
         //Create Registerbutton
         Button register = new Button("Register");
@@ -126,6 +138,18 @@ public class Gui extends Application {
             if(!password.getText().equals(confirmPassword.getText())){
                 showAlertBox("Password", "Passwords does not match, try again.");
             } else {
+                UserHandling userHandling = new UserHandling();
+                userHandling.setRegister(true);
+                userHandling.setUsername(username.getText());
+                userHandling.setPassword(password.getText());
+                userHandling.setEmail(email.getText());
+                Server server = null;
+                try {
+                    server = new Server(host, port);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+                server.sendSqlSelectStatementObject(host, port, userHandling);
                 primaryStage.setScene(logInScene);
             }
         });
@@ -138,12 +162,15 @@ public class Gui extends Application {
         // Column 0
         grid.add(usernameText, 0, 1);
         grid.add(passwordText, 0, 2);
+        grid.add(emailText, 0, 4);
         grid.add(confirmPasswordText, 0, 3);
+
         // Column 1
         grid.add(username, 1, 1);
         grid.add(password, 1, 2);
         grid.add(confirmPassword, 1, 3);
-        grid.add(register, 1, 4);
+        grid.add(email, 1, 4);
+        grid.add(register, 1, 5);
 
         borderPane.setCenter(grid);
         borderPane.setBottom(loginButton);
