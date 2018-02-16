@@ -64,7 +64,8 @@ public class Gui extends Application {
     /**
      * Creates the login scene and returns it.
      * @param primaryStage primary stage
-     * @param grid grid layout.
+     * @param grid grid layout placed in center
+     * @param borderPane borderpane for main layout
      * @return
      */
     private Scene getLoginScene(Stage primaryStage, GridPane grid, BorderPane borderPane){
@@ -95,8 +96,10 @@ public class Gui extends Application {
             boolean loginValidation = server.validateUser(host, port, usernameField.getText(), passwordField.getText());
             if (loginValidation) {
                 System.out.println("From server: Access Granted");
-                showAlertBox("Success", "Log in successful");
-                //primaryStage.setScene(mainGameScene);
+                //showAlertBox("Success", "Log in successful");
+                usernameField.setText("");
+                passwordField.setText("");
+                primaryStage.setScene(mainGameScene);
             } else {
                 showAlertBox("Log In", "Wrong username or password");
             }
@@ -115,6 +118,13 @@ public class Gui extends Application {
         return new Scene(borderPane, 250, 250);
     }
 
+    /**
+     * Creates the regiter scene and returns it.
+     * @param primaryStage primary stage
+     * @param grid grid layout placed in center
+     * @param borderPane borderpane for main layout
+     * @return
+     */
     private Scene getRegisterScene(Stage primaryStage, GridPane grid, BorderPane borderPane){
         //Create text field
         Text usernameText = new Text("Username:");
@@ -125,18 +135,20 @@ public class Gui extends Application {
         //Create text boxes
         TextField username = new TextField();
         username.setMaxSize(120, 20);
-        TextField password = new TextField();
+        PasswordField password = new PasswordField();
         password.setMaxSize(120, 20);
-        TextField confirmPassword = new TextField();
+        PasswordField confirmPassword = new PasswordField();
         confirmPassword.setMaxSize(120, 20);
         TextField email = new TextField();
         email.setMaxSize(120, 20);
 
-        //Create Registerbutton
+        //Create Register button
         Button register = new Button("Register");
         register.setOnAction(event -> {
             if(!password.getText().equals(confirmPassword.getText())){
                 showAlertBox("Password", "Passwords does not match, try again.");
+                password.setText("");
+                confirmPassword.setText("");
             } else {
                 UserHandling userHandling = new UserHandling();
                 userHandling.setRegister(true);
@@ -150,6 +162,10 @@ public class Gui extends Application {
                     e.printStackTrace();
                 }
                 server.sendSqlSelectStatementObject(host, port, userHandling);
+                username.setText("");
+                password.setText("");
+                confirmPassword.setText("");
+                email.setText("");
                 primaryStage.setScene(logInScene);
             }
         });
@@ -176,6 +192,8 @@ public class Gui extends Application {
         borderPane.setBottom(loginButton);
         return new Scene(borderPane, 250, 250);
     }
+
+    // TODO: public Scene getMainGameScene(Stage primaryStage, GridPane grid, BorderPane borderPane)
 
     /**
      * Displays an alertbox that always is on top.
