@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.PasswordField?>
+<BorderPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="Gui" prefHeight="400.0" prefWidth="600.0">
+    <center>
+        <GridPane hgap="10" vgap="10" alignment="CENTER">
+            <Text text="Cyber Mafia" GridPane.columnIndex="0" GridPane.rowIndex="0" GridPane.columnSpan="2" />
+            <Text text="Username:" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+            <Text text="Password:" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+            <TextField fx:id="username" GridPane.columnIndex="2" GridPane.rowIndex="1"/>
+            <PasswordField fx:id="password" GridPane.columnIndex="2" GridPane.rowIndex="2"/>
+            <Button text="Log in" GridPane.columnIndex="2" GridPane.rowIndex="3" fx:id="logInBtn" onAction="#validateUser"/>
+        </GridPane>
+    </center>
+    <bottom>
+        <Button text="Create account"/>
+    </bottom>
+</BorderPane>

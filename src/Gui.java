@@ -1,40 +1,59 @@
 import javafx.application.Application;
+import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.*;
-import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
 import javafx.scene.text.TextAlignment;
 import javafx.stage.Stage;
 
+import java.awt.event.ActionEvent;
 import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
 
 public class Gui extends Application {
     GridPane gridPane;
     private String host;
     private int port;
     private Scene logInScene, registerScene, mainGameScene;
+    private Stage primaryStage;
+
+    @FXML private TextField username;
+    @FXML private PasswordField password;
+    @FXML private Button logInBtn;
 
     @Override
-    public void start(Stage primaryStage) {
+    public void start(Stage primaryStage) throws IOException {
         host = main.getHost();
         port = main.getPort();
+        this.primaryStage = primaryStage;
 
         // Get scenes
-        logInScene = getLoginScene(primaryStage, createGridPane(10, 10, Pos.CENTER), getBorderPane());
-        registerScene = getRegisterScene(primaryStage, createGridPane(10, 10, Pos.CENTER), getBorderPane());
+        //logInScene = getLoginScene(this.primaryStage, createGridPane(10, 10, Pos.CENTER), getBorderPane());
+        registerScene = getRegisterScene(this.primaryStage, createGridPane(10, 10, Pos.CENTER), getBorderPane());
         // TODO: mainGameScene = getMainGameScene();
+
+        /**
+         * Testing FXML
+         */
+        Parent root = FXMLLoader.load(getClass().getResource("login.fxml"));
+
+        logInScene = new Scene(root, 400, 300);
 
 
         // Setup primary stage with login scene
         primaryStage.setTitle("CyberMafia");
         primaryStage.setScene(logInScene);
 
-        primaryStage.setOnCloseRequest(e -> primaryStage.close());
+        primaryStage.setOnCloseRequest(e -> this.primaryStage.close());
         primaryStage.show();
     }
 
@@ -225,5 +244,33 @@ public class Gui extends Application {
 
         alertStage.setScene(new Scene(pane));
         alertStage.show();
+    }
+
+
+    public void validateUser() {
+        host = main.getHost();
+        port = main.getPort();
+        this.logInBtn.setOnAction(e -> {
+            Server server = null;
+            System.out.println(server);
+            try {
+                server = new Server(host, port);
+                System.out.println(server);
+            } catch (IOException e1) {
+                e1.printStackTrace();
+            }
+            boolean loginValidation = server.validateUser(host, port, this.username.getText(), this.password.getText());
+            if (loginValidation) {
+                System.out.println("From server: Access Granted");
+                //showAlertBox("Success", "Log in successful");
+                this.username.setText("");
+                this.password.setText("");
+                //this.primaryStage.setScene();
+                System.out.println("Log in successful...");
+            } else {
+                //showAlertBox("Log In", "Wrong username or password");
+                System.out.println("Wrong username...");
+            }
+        });
     }
 }
