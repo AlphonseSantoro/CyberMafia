@@ -1,3 +1,4 @@
+package cybermafia;
 
 public class Crimes{
     private int cash, randMin, randMax;

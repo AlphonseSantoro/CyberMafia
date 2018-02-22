@@ -1,3 +1,5 @@
+package cybermafia;
+
 import java.util.HashMap;
 
 public class Rank {

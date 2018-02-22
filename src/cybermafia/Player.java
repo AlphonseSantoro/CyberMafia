@@ -1,3 +1,5 @@
+package cybermafia;
+
 public class Player {
 
     private Crimes crime;
