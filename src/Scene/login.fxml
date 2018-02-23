@@ -17,6 +17,6 @@
         </GridPane>
     </center>
     <bottom>
-        <Button text="Create account"/>
+        <Button text="Create account" fx:id="register" onAction="#registerUser"/>
     </bottom>
 </BorderPane>
