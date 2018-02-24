@@ -2,6 +2,8 @@ package cybermafia;
 
 import javafx.application.Application;
 
+import java.util.ArrayList;
+
 public class main {
     private static String host;
     private static int port;
@@ -24,5 +26,4 @@ public class main {
     public static int getPort(){
         return port;
     }
-
 }

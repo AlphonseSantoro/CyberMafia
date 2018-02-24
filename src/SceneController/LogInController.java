@@ -28,10 +28,8 @@ public class LogInController {
         port = main.getPort();
         this.logInBtn.setOnAction(e -> {
             Server server = null;
-            System.out.println(server);
             try {
                 server = new Server(host, port);
-                System.out.println(server);
             } catch (IOException e1) {
                 e1.printStackTrace();
             }

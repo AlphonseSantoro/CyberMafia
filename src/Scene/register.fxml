@@ -14,7 +14,7 @@
 
             <TextField fx:id="username" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
             <PasswordField fx:id="password" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
-            <PasswordField fx:id="confirmpassword" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+            <PasswordField fx:id="confirmPassword" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
             <TextField fx:id="email" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
 
             <Button text="Register" fx:id="register" GridPane.columnIndex="1" GridPane.rowIndex="4" onAction="#registerUser"/>

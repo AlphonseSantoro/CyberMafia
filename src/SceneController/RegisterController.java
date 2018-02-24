@@ -3,6 +3,7 @@ package SceneController;
 import cybermafia.Gui;
 import cybermafia.Server;
 import cybermafia.UserHandling;
+import cybermafia.main;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
@@ -23,6 +24,8 @@ public class RegisterController {
 
 
     public void registerUser(){
+        host = main.getHost();
+        port = main.getPort();
         Gui gui = new Gui();
         register.setOnAction(event -> {
             if(!password.getText().equals(confirmPassword.getText())){
