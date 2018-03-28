@@ -20,7 +20,6 @@ public class Gui extends Application {
     private int port;
     private static Scene logInScene, registerScene, desktop;
     private static Stage primaryStage;
-    private List<Scene> scenes;
 
 
 
@@ -28,7 +27,7 @@ public class Gui extends Application {
     public void start(Stage primaryStage) throws IOException {
         host = main.getHost();
         port = main.getPort();
-        this.primaryStage = primaryStage;
+        Gui.primaryStage = primaryStage;
 
         // Create scenes
         logInScene =  createScene(400, 300, "../Scene/login.fxml");
@@ -38,7 +37,7 @@ public class Gui extends Application {
         // Setup primary stage with login scene
         primaryStage.setTitle("CyberMafia");
         primaryStage.setScene(logInScene);
-        primaryStage.setOnCloseRequest(e -> this.primaryStage.close());
+        primaryStage.setOnCloseRequest(e -> Gui.primaryStage.close());
         primaryStage.show();
     }
 
@@ -85,7 +84,7 @@ public class Gui extends Application {
      * @return
      * @throws IOException
      */
-    public Scene createScene(int width, int height, String fxml) throws IOException {
+    private Scene createScene(int width, int height, String fxml) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource(fxml));
         return new Scene(root, width, height);
     }

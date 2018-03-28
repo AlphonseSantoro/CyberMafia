@@ -1,101 +1,103 @@
-DROP DATABASE IF EXISTS CyberMafia;
-CREATE DATABASE CyberMafia;
-USE CyberMafia;
+DROP DATABASE IF EXISTS cybermafia;
+CREATE DATABASE cybermafia;
+USE cybermafia;
 
-CREATE TABLE User(
-    UserName VARCHAR(20),
-    Password VARCHAR(256),
-    Salt VARCHAR(256),
-    Email VARCHAR(256),
-    LastLogin datetime,
-    CONSTRAINT UserName_PK
-    PRIMARY KEY (UserName)
+CREATE TABLE user (
+  username  VARCHAR(20),
+  password  VARCHAR(256),
+  salt      VARCHAR(256),
+  email     VARCHAR(256),
+  lastlogin DATETIME,
+  CONSTRAINT username_pk
+  PRIMARY KEY (username)
 );
 
-CREATE TABLE PC_CPU(
-    ID INT AUTO_INCREMENT UNIQUE NOT NULL,
-    Name CHAR(20),
-    GHz FLOAT,
-    CONSTRAINT ID_CPU_PK
-    PRIMARY KEY (ID)
+CREATE TABLE pc_cpu (
+  id   INT AUTO_INCREMENT UNIQUE NOT NULL,
+  name CHAR(20),
+  ghz  FLOAT,
+  CONSTRAINT id_cpu_pk
+  PRIMARY KEY (id)
 );
 
-CREATE TABLE PC_GPU(
-    ID INT AUTO_INCREMENT UNIQUE NOT NULL,
-    Name CHAR(20),
-    GHz FLOAT,
-    CONSTRAINT ID_GPU_PK
-    PRIMARY KEY (ID)
+CREATE TABLE pc_gpu (
+  id   INT AUTO_INCREMENT UNIQUE NOT NULL,
+  name CHAR(20),
+  ghz  FLOAT,
+  CONSTRAINT id_gpu_pk
+  PRIMARY KEY (id)
 );
 
-CREATE TABLE PC_HDD(
-    ID INT AUTO_INCREMENT UNIQUE NOT NULL,
-    Name CHAR(20),
-    Size BIGINT
+CREATE TABLE pc_hdd (
+  id   INT AUTO_INCREMENT UNIQUE NOT NULL,
+  name CHAR(20),
+  size BIGINT
 );
 
 
-CREATE TABLE FireWall(
-    ID INT AUTO_INCREMENT NOT NULL,
-    Name CHAR(20),
-    Security INT,
-    CONSTRAINT FW_ID_PK
-    PRIMARY KEY (ID)
+CREATE TABLE firewall (
+  id       INT AUTO_INCREMENT NOT NULL,
+  name     CHAR(20),
+  security INT,
+  CONSTRAINT fw_id_pk
+  PRIMARY KEY (id)
 );
 
-CREATE TABLE Backdoor(
-    ID INT AUTO_INCREMENT NOT NULL,
-    Name CHAR(20),
-    Power INT,
-    CONSTRAINT BD_ID_PK
-    PRIMARY KEY (ID)
+CREATE TABLE backdoor (
+  id    INT AUTO_INCREMENT NOT NULL,
+  name  CHAR(20),
+  power INT,
+  CONSTRAINT bd_id_pk
+  PRIMARY KEY (id)
 );
 
-CREATE TABLE Player(
-    Username VARCHAR(20),
-    playerIP CHAR(19),
-    pc_CPU_ID INT,
-    pc_GPU_ID INT,
-    pc_HDD_ID INT,
-    FireWall INT,
-    BackDoor INT,
-    CONSTRAINT Username_PK
-    PRIMARY KEY (userName),
-    CONSTRAINT Username_FK
-    FOREIGN KEY (UserName) REFERENCES User(UserName)
-    /*
-    CONSTRAINT pc_CPU_ID_FK
-    FOREIGN KEY (pc_CPU_ID) REFERENCES PC_CPU(ID),
-    CONSTRAINT pc_GPU_ID_FK
-    FOREIGN KEY (pc_GPU_ID) REFERENCES PC_GPU(ID),
-    CONSTRAINT pc_HDD_ID_FK
-    FOREIGN KEY (pc_HDD_ID) REFERENCES PC_HDD(ID),
-    CONSTRAINT FW_ID_FK
-    FOREIGN KEY (FireWall) REFERENCES FireWall(ID),
-    CONSTRAINT BD_ID_FK
-    FOREIGN KEY (BackDoor) REFERENCES Backdoor(ID) */
+CREATE TABLE player (
+  username  VARCHAR(20),
+  playerip  CHAR(19),
+  pc_cpu_id INT,
+  pc_gpu_id INT,
+  pc_hdd_id INT,
+  firewall  INT,
+  backdoor  INT,
+  CONSTRAINT username_pk
+  PRIMARY KEY (username),
+  CONSTRAINT username_fk
+  FOREIGN KEY (username) REFERENCES user (username)
+  /*
+  constraint pc_cpu_id_fk
+  foreign key (pc_cpu_id) references pc_cpu(id),
+  constraint pc_gpu_id_fk
+  foreign key (pc_gpu_id) references pc_gpu(id),
+  constraint pc_hdd_id_fk
+  foreign key (pc_hdd_id) references pc_hdd(id),
+  constraint fw_id_fk
+  foreign key (firewall) references firewall(id),
+  constraint bd_id_fk
+  foreign key (backdoor) references backdoor(id) */
 );
 
-CREATE TABLE NPC(
-    ID INT AUTO_INCREMENT NOT NULL,
-    Name CHAR(20),
-    IP CHAR(19),
-    -- Type
-    CONSTRAINT Name_PK
-    PRIMARY KEY (ID)
+CREATE TABLE npc (
+  id   INT AUTO_INCREMENT NOT NULL,
+  name CHAR(20),
+  ip   CHAR(19),
+  -- type
+  CONSTRAINT name_pk
+  PRIMARY KEY (id)
 );
 
-CREATE TABLE IP_List (
-    IP CHAR(19),
-    UserName VARCHAR(20),
-    NPCID INT,
-    CONSTRAINT IP_PK PRIMARY KEY (IP),
-    CONSTRAINT IPLIST_UserName_FK FOREIGN KEY (UserName)
-    REFERENCES Player (UserName),
-    CONSTRAINT NPCID_FK FOREIGN KEY (NPCID)
-    REFERENCES NPC (ID)
+CREATE TABLE ip_list (
+  ip       CHAR(19),
+  username VARCHAR(20),
+  npcid    INT,
+  CONSTRAINT ip_pk PRIMARY KEY (ip),
+  CONSTRAINT iplist_username_fk FOREIGN KEY (username)
+  REFERENCES player (username),
+  CONSTRAINT npcid_fk FOREIGN KEY (npcid)
+  REFERENCES npc (id)
 );
 
-CREATE TRIGGER CheckIP AFTER INSERT ON player
-    FOR EACH ROW INSERT INTO ip_list
-VALUES (new.playerIP, new.username, null);
+CREATE TRIGGER checkip
+  AFTER INSERT
+  ON player
+  FOR EACH ROW INSERT INTO ip_list
+VALUES (new.playerip, new.username, NULL);

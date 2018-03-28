@@ -1,4 +1,4 @@
-package SceneController;
+package Controller;
 
 import cybermafia.Gui;
 import cybermafia.Server;

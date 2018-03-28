@@ -1,0 +1,86 @@
+
+
+0. Introduction
+	This document describes a number of ideas on how the game Mafia Wars will be designed and buildt upon.
+	With a user setting based on having a personal desktop that is can attack and hack other players and 
+	non-playing characters (NPC), to both hamper others and gain more resources.
+
+
+1. Desktop Station
+	A virtual respresentation of a laptop that can be upgraded by ingame resources earned by the player.
+	Certain activities will be needed in order to get access to more gameplay, as a ingame progress bar.
+	The player needs to upgrade his station with several to both get access to higher tier attack and
+	defence abilities in the game. In order to access mail, a player needs to buy a mail server etc.
+
+	_______________________________________________________________________________________________
+
+
+2. Resources:
+	Crypto mining, hacking, black-mail and attacking are the ways you earn more resources. There are of
+	course restrictions on how to managed these. A certain number of attacks/hacks are availible each day
+	and cannot be done again before a daily reset. A possible restriction on those could be implemented by
+	a "cover" mechanic, where a story NPC helps proxy your IP for only a certain number of attempts,
+	while continues attacks will then reviel your IP to other players and NPC's, making you a target.
+ 
+2.1 Crypto Mining:
+	One of the upgrade to resource-over-time could be crypto-mining. A simple invest and sit-back mechanic
+	that will yield a permanent income for the player for each upgrade. However, if these assets will be 
+	specifically targeted by NPC if it becomes too high - as a game balance mechanic.
+
+2.2 Hacking:
+	If the player hacks another PC and succeeds, the hack will capture a moderate sum of crypto-currency.
+	The main idea is that the hack does not take more than 25% of the players fortune. To avoid greifing
+	another barrier should be set at max 40% of total fortune per day could be lost to hacks. The player 
+'	needs to invest accets in order to gain more.
+
+2.3 Black-Mail:
+	This is an attack specifically meant towards NPCs and missions. The game could describe it as a troyan
+	malware attacking the mail server. The malware takes "sensitve information" from the NPC and you get a
+	pay-out to avoid you from spreading said information. This attack is very sensitive to being counter-
+	attacked and will cause a back-lash if the player has no access to the daily proxxy service.
+
+2.4 Attack:
+	Attacks are virus based and do not gain any profit back to the user. You use ingame-currency to buy a
+	virus from the ingame market and will destroy the victims accets at a double rate of the invesment.
+
+
+	_______________________________________________________________________________________________
+
+ 
+3. Defense:
+	To allow the player the away to defend him/herself from other players and the NPC's, several defence 
+	mechanics could be implemented. Each form of attack should have a specific defense. A firewall to stop
+	hacks, anti-malware for black-mail and antivirus programs/backups to stop virus.
+
+3.1 Firewall:
+	An upgrade that is purchased through the ingame store. A firewall comes with several fixed prices, and
+	will conrespondingly stop the attacks with a RNG effect, were high value hack will make a weak firewall
+	only slightly reduce the victims loss, while a high value firewall can stop a low value hack with ease.
+	
+3.2 Anti-malware:
+	Stops black-mail trojans from spreading from NPC attacks against you. Other players cannot black-mail 
+	each other and may be viewed as PVE.
+
+3.3 Anti-virus:
+	To stop virus attacks from succeeding on your PC you can use two options. One is antivirus, and the 
+	best option. If the user has several HD installed on the PC and a virus succeeds, there is a RNG effect 
+	on how many HD and how much currency/hardware is lost.
+
+3.4 Back-up:
+	For every HD you can have a back-up in case of successfull virus attacks. The cost of a back-up is twice 
+	the value of a regular HD and there will be a time-delay in both crypto-mining and access to the restored 
+	HD in case of the need to restore what was lost. The back-up will not restore a destroyed hardware, but 
+	may reduce the lost currency by 50%, as you can only back-up 50% of the HD. 	
+
+	_______________________________________________________________________________________________
+
+
+4. Upgrades:
+	There should be a several upgrade options for both hardware and software. Details can be quite liberal, 
+	but should include: mail-server, HD upgrade, more HD, cryoti-mining cards, graphics card, ram etc.
+
+5. Story:
+	TBD - Can be a modernday setting, a retro setting or a fictional one. A possible goal could be to attain 
+	political power by amasing money and power through hacking and by tools like fake-news spreading, black-
+	mail, hacking twitter accounts as part of smear-campaigns, you win by ruining the reputation of the 
+	enemies of your political candidate.

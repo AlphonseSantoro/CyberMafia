@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.text.Text?>
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="Controller.Programs.TextEditor"
+            prefHeight="400.0" prefWidth="600.0">
+    <top>
+        <MenuBar>
+            <Menu text="File"/>
+            <Menu text="Edit"/>
+            <Menu text="About"/>
+        </MenuBar>
+    </top>
+    <center>
+        <Text text="Test text!!"/>
+    </center>
+</BorderPane>

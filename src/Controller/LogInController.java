@@ -1,4 +1,4 @@
-package SceneController;
+package Controller;
 
 import cybermafia.Gui;
 import cybermafia.Server;
@@ -33,16 +33,16 @@ public class LogInController {
             } catch (IOException e1) {
                 e1.printStackTrace();
             }
-            boolean loginValidation = server.validateUser(host, port, this.username.getText(), this.password.getText());
-            if (loginValidation) {
-                System.out.println("From server: Access Granted");
-                //showAlertBox("Success", "Log in successful");
+            Gui g = new Gui();
+            if (server == null) {
+                g.showAlertBox("Error", "No connection to server.");
+            } else if (server.validateUser(host, port, this.username.getText(), this.password.getText())) {
                 this.username.setText("");
                 this.password.setText("");
-                //this.primaryStage.setScene();
+                Gui.changeScene(Gui.getDesktop());
                 System.out.println("Log in successful...");
             } else {
-                //showAlertBox("Log In", "Wrong username or password");
+                g.showAlertBox("Log In", "Wrong username or password");
                 System.out.println("Wrong username...");
             }
         });
