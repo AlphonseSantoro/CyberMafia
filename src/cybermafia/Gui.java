@@ -120,4 +120,8 @@ public class Gui extends Application {
     public static Scene getDesktop(){
         return desktop;
     }
+
+    public static Stage getPrimaryStage(){
+        return primaryStage;
+    }
 }
