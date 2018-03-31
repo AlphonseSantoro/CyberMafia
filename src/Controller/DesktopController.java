@@ -16,45 +16,42 @@ import jfxtras.scene.control.window.CloseIcon;
 import jfxtras.scene.control.window.MinimizeIcon;
 import jfxtras.scene.control.window.Window;
 
-import java.awt.*;
 import java.io.IOException;
 
 public class DesktopController {
 
     @FXML MenuItem textEditor;
-    @FXML Pane grid;
+    @FXML Pane pane;
     @FXML BorderPane borderPane;
     private final Group group = new Group();
 
     public void initialize(){
-        Pane p = new Pane();
-        p.setPrefSize(grid.getPrefWidth(), grid.getPrefHeight());
+        pane.setPrefSize(pane.getPrefWidth(), pane.getPrefHeight());
         ImageView im = new ImageView();
         Image i = new Image("/download.jpeg");
         im.setImage(i);
-        im.fitWidthProperty().bind(p.widthProperty());
-        im.fitHeightProperty().bind(p.heightProperty());
-        p.setMinSize(Gui.getPrimaryStage().getWidth(), Gui.getPrimaryStage().getHeight());
-        p.getChildren().add(im);
-        grid.getChildren().add(p);
-        grid.getChildren().add(group);
+        im.fitWidthProperty().bind(pane.widthProperty());
+        im.fitHeightProperty().bind(pane.heightProperty());
+        pane.setMinSize(Gui.getPrimaryStage().getWidth(), Gui.getPrimaryStage().getHeight());
+        pane.getChildren().add(im);
+        pane.getChildren().add(group);
         group.prefHeight(borderPane.getHeight());
         group.prefWidth(borderPane.getWidth());
     }
 
     @FXML
     private void openTextEditor() throws IOException {
-        openWindow(createScene(400, 500, "../Scene/Programs/TextEditor.fxml").getRoot());
+        openWindow(loadFXML(500, 400, "../Scene/Programs/TextEditor.fxml"), "New document", 500, 400);
     }
 
-    private Scene createScene(int width, int height, String fxml) throws IOException {
+    private Node loadFXML(int width, int height, String fxml) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource(fxml));
-        return new Scene(root, width, height);
+        return new Scene(root, width, height).getRoot();
     }
 
-    private void openWindow(Node node){
-        Window window = new Window("Text Editor");
-        window.setPrefSize(300, 200);
+    private void openWindow(Node node, String title, int prefWidth, int prefHeight){
+        Window window = new Window(title);
+        window.setPrefSize(prefWidth, prefHeight);
         window.setLayoutX(0);
         window.setLayoutY(10);
         window.getLeftIcons().add(new CloseIcon(window));
@@ -62,14 +59,6 @@ public class DesktopController {
         window.getContentPane().getChildren().add(node);
         window.setSelectable(true);
         window.setMovable(true);
-        window.setOnMousePressed(e -> {
-            Point p = MouseInfo.getPointerInfo().getLocation();
-            System.out.println(window.isSelected());
-            if(window.isSelected()){
-                window.setLayoutX(p.getX());
-                window.setLayoutY(p.getY());
-            }
-        });
         group.getChildren().add(window);
     }
 }

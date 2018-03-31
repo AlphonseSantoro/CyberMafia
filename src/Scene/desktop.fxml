@@ -5,7 +5,7 @@
 
 <BorderPane fx:id="borderPane" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="Controller.DesktopController" prefHeight="600.0" prefWidth="800.0">
     <center >
-        <Pane fx:id="grid">
+        <Pane fx:id="pane">
 
         </Pane>
     </center>
