@@ -1,14 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
 <BorderPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
             fx:controller="Controller.Programs.Browser"
             prefHeight="400.0" prefWidth="600.0">
-
+    <top>
+        <!-- Navigation bar -->
+    </top>
+    <center>
+        <!-- Content area: This needs to show information about other computers/dashboard of the computer hacked -->
+        <!-- When the user enters an IP that belongs to a user the login form will display. Each computer will have a random
+        password generated that can be hacked.-->
+    </center>
 </BorderPane>

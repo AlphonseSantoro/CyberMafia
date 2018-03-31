@@ -7,9 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8b6c470c-475d-4d92-bf49-4dc5b436a5e9" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/Controller/Programs/Browser.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/Scene/Programs/Browser.fxml" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/src/Scene/Programs/Browser.fxml" afterPath="$PROJECT_DIR$/src/Scene/Programs/Browser.fxml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -91,24 +89,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Browser.fxml" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Browser.fxml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Scene/Programs/Browser.fxml">
           <provider editor-type-id="JavaFX-Scene-Builder">
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="10" column="52" lean-forward="false" selection-start-line="10" selection-start-column="52" selection-end-line="10" selection-end-column="52" />
+            <state relative-caret-position="252">
+              <caret line="14" column="46" lean-forward="false" selection-start-line="14" selection-start-column="46" selection-end-line="14" selection-end-column="46" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Browser.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Browser.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Controller/Programs/Browser.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="36">
-              <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+              <caret line="2" column="22" lean-forward="true" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -163,8 +161,8 @@
         <option value="$PROJECT_DIR$/src/Scene/desktop.fxml" />
         <option value="$PROJECT_DIR$/src/Controller/DesktopController.java" />
         <option value="$PROJECT_DIR$/src/Scene/Programs/TextEditor.fxml" />
-        <option value="$PROJECT_DIR$/src/Scene/Programs/Browser.fxml" />
         <option value="$PROJECT_DIR$/src/Controller/Programs/Browser.java" />
+        <option value="$PROJECT_DIR$/src/Scene/Programs/Browser.fxml" />
       </list>
     </option>
   </component>
@@ -417,12 +415,12 @@
       <workItem from="1522431803197" duration="4593000" />
       <workItem from="1522493577632" duration="2068000" />
       <workItem from="1522495867614" duration="2894000" />
-      <workItem from="1522527796877" duration="1025000" />
+      <workItem from="1522527796877" duration="1512000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42724000" />
+    <option name="totallyTimeSpent" value="43211000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -944,21 +942,21 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/Programs/Browser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" column="22" lean-forward="true" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Scene/Programs/Browser.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder">
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="10" column="52" lean-forward="false" selection-start-line="10" selection-start-column="52" selection-end-line="10" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/Programs/Browser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        <state relative-caret-position="252">
+          <caret line="14" column="46" lean-forward="false" selection-start-line="14" selection-start-column="46" selection-end-line="14" selection-end-column="46" />
           <folding />
         </state>
       </provider>
