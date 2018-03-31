@@ -1,7 +1,6 @@
 package Controller;
 
 import cybermafia.Gui;
-import javafx.event.EventType;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Group;
@@ -11,12 +10,8 @@ import javafx.scene.Scene;
 import javafx.scene.control.MenuItem;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.input.Dragboard;
-import javafx.scene.input.MouseDragEvent;
-import javafx.scene.input.MouseEvent;
-import javafx.scene.input.TransferMode;
+import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
-import javafx.scene.layout.StackPane;
 import jfxtras.scene.control.window.CloseIcon;
 import jfxtras.scene.control.window.MinimizeIcon;
 import jfxtras.scene.control.window.Window;
@@ -26,23 +21,25 @@ import java.io.IOException;
 
 public class DesktopController {
 
-    @FXML
-    MenuItem textEditor;
-    @FXML
-    StackPane centerLayout;
+    @FXML MenuItem textEditor;
+    @FXML Pane grid;
+    @FXML BorderPane borderPane;
     private final Group group = new Group();
 
     public void initialize(){
-        centerLayout.getChildren().add(group);
         Pane p = new Pane();
-        p.setMinSize(centerLayout.getMinWidth(), centerLayout.getMinHeight());
+        p.setPrefSize(grid.getPrefWidth(), grid.getPrefHeight());
         ImageView im = new ImageView();
         Image i = new Image("/download.jpeg");
         im.setImage(i);
+        im.fitWidthProperty().bind(p.widthProperty());
+        im.fitHeightProperty().bind(p.heightProperty());
         p.setMinSize(Gui.getPrimaryStage().getWidth(), Gui.getPrimaryStage().getHeight());
         p.getChildren().add(im);
-        group.getChildren().add(p);
-
+        grid.getChildren().add(p);
+        grid.getChildren().add(group);
+        group.prefHeight(borderPane.getHeight());
+        group.prefWidth(borderPane.getWidth());
     }
 
     @FXML
@@ -56,7 +53,7 @@ public class DesktopController {
     }
 
     private void openWindow(Node node){
-        Window window = new Window("Window 1");
+        Window window = new Window("Text Editor");
         window.setPrefSize(300, 200);
         window.setLayoutX(0);
         window.setLayoutY(10);
@@ -67,9 +64,10 @@ public class DesktopController {
         window.setMovable(true);
         window.setOnMousePressed(e -> {
             Point p = MouseInfo.getPointerInfo().getLocation();
+            System.out.println(window.isSelected());
             if(window.isSelected()){
-                window.setLayoutX(p.getX() + window.getTranslateX());
-                window.setLayoutY(p.getY() + window.getTranslateY());
+                window.setLayoutX(p.getX());
+                window.setLayoutY(p.getY());
             }
         });
         group.getChildren().add(window);

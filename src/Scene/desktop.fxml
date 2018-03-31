@@ -3,11 +3,11 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<BorderPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="Controller.DesktopController" prefHeight="600.0" prefWidth="800.0">
-    <center>
-        <StackPane fx:id="centerLayout">
+<BorderPane fx:id="borderPane" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="Controller.DesktopController" prefHeight="600.0" prefWidth="800.0">
+    <center >
+        <Pane fx:id="grid">
 
-        </StackPane>
+        </Pane>
     </center>
     <bottom>
         <MenuBar>
