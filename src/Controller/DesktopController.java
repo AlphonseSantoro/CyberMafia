@@ -26,17 +26,15 @@ public class DesktopController {
     private final Group group = new Group();
 
     public void initialize(){
-        pane.setPrefSize(pane.getPrefWidth(), pane.getPrefHeight());
+        // Set background image
         ImageView im = new ImageView();
         Image i = new Image("/download.jpeg");
         im.setImage(i);
         im.fitWidthProperty().bind(pane.widthProperty());
         im.fitHeightProperty().bind(pane.heightProperty());
-        pane.setMinSize(Gui.getPrimaryStage().getWidth(), Gui.getPrimaryStage().getHeight());
+        // Add image and group to pane
         pane.getChildren().add(im);
         pane.getChildren().add(group);
-        group.prefHeight(borderPane.getHeight());
-        group.prefWidth(borderPane.getWidth());
     }
 
     @FXML
