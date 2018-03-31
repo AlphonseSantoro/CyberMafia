@@ -2,12 +2,22 @@
 
 <?import javafx.scene.layout.*?>
 
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.text.Text?>
+<?import javafx.geometry.Insets?>
 <BorderPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
             fx:controller="Controller.Programs.Browser"
             prefHeight="400.0" prefWidth="600.0">
     <top>
         <!-- Navigation bar -->
+        <HBox spacing="10">
+            <padding>
+                <Insets bottom="10" left="10" top="10" right="10"/>
+            </padding>
+            <Text text="Url:"/>
+            <TextField minWidth="200" text="http://www.google.com"/>
+        </HBox>
     </top>
     <center>
         <!-- Content area: This needs to show information about other computers/dashboard of the computer hacked -->

@@ -13,6 +13,7 @@
         <MenuBar>
             <Menu text="Programs">
                 <MenuItem fx:id="textEditor" text="Text Editor" onAction="#openTextEditor"/>
+                <MenuItem fx:id="browser" text="Browser" onAction="#openBrowser"/>
             </Menu>
 
         </MenuBar>

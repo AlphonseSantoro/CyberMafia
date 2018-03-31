@@ -42,6 +42,11 @@ public class DesktopController {
         openWindow(loadFXML(500, 400, "../Scene/Programs/TextEditor.fxml"), "New document", 500, 400);
     }
 
+    @FXML
+    private void openBrowser() throws IOException {
+        openWindow(loadFXML(500, 400, "../Scene/Programs/Browser.fxml"), "Browser", 500, 400);
+    }
+
     private Node loadFXML(int width, int height, String fxml) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource(fxml));
         return new Scene(root, width, height).getRoot();
