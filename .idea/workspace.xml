@@ -7,15 +7,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8b6c470c-475d-4d92-bf49-4dc5b436a5e9" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/Controller/Programs/Profile.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/Scene/Programs/Profile.fxml" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/out/production/CyberMafia/Controller/DesktopController.class" afterPath="$PROJECT_DIR$/out/production/CyberMafia/Controller/DesktopController.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/CyberMafia/Scene/desktop.fxml" afterPath="$PROJECT_DIR$/out/production/CyberMafia/Scene/desktop.fxml" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/DesktopController.java" afterPath="$PROJECT_DIR$/src/Controller/DesktopController.java" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/Programs/Browser.java" afterPath="$PROJECT_DIR$/src/Controller/Programs/Browser.java" />
-      <change beforePath="$PROJECT_DIR$/src/Scene/Programs/Browser.fxml" afterPath="$PROJECT_DIR$/src/Scene/Programs/Browser.fxml" />
-      <change beforePath="$PROJECT_DIR$/src/Scene/desktop.fxml" afterPath="$PROJECT_DIR$/src/Scene/desktop.fxml" />
       <change beforePath="$PROJECT_DIR$/src/cybermafia/Server.java" afterPath="$PROJECT_DIR$/src/cybermafia/Server.java" />
       <change beforePath="$PROJECT_DIR$/src/cybermafia/UserHandling.java" afterPath="$PROJECT_DIR$/src/cybermafia/UserHandling.java" />
     </list>
@@ -28,7 +19,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.57579875">
+    <splitter split-orientation="horizontal" split-proportion="0.5267218">
       <split-first>
         <leaf>
           <file leaf-file-name="Browser.java" pinned="false" current-in-tab="false">
@@ -51,21 +42,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="LogInController.java" pinned="false" current-in-tab="false">
+          <file leaf-file-name="LogInController.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/Controller/LogInController.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="226">
-                  <caret line="40" column="42" lean-forward="true" selection-start-line="40" selection-start-column="42" selection-end-line="40" selection-end-column="42" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="UserHandling.java" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/cybermafia/UserHandling.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="468">
-                  <caret line="93" column="18" lean-forward="false" selection-start-line="93" selection-start-column="18" selection-end-line="93" selection-end-column="18" />
+                <state relative-caret-position="414">
+                  <caret line="31" column="48" lean-forward="true" selection-start-line="31" selection-start-column="48" selection-end-line="31" selection-end-column="48" />
                   <folding />
                 </state>
               </provider>
@@ -100,23 +81,13 @@
           <file leaf-file-name="desktop.fxml" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/Scene/desktop.fxml">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="72">
-                  <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+                <state relative-caret-position="360">
+                  <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
               <provider editor-type-id="JavaFX-Scene-Builder">
                 <state />
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="Server.java" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/cybermafia/Server.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="190">
-                  <caret line="32" column="13" lean-forward="false" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
-                  <folding />
-                </state>
               </provider>
             </entry>
           </file>
@@ -130,6 +101,21 @@
               </provider>
               <provider editor-type-id="JavaFX-Scene-Builder">
                 <state />
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="UserHandling.java" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/cybermafia/UserHandling.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="206">
+                  <caret line="14" column="63" lean-forward="false" selection-start-line="14" selection-start-column="63" selection-end-line="14" selection-end-column="63" />
+                  <folding>
+                    <element signature="e#3558#3559#0" expanded="true" />
+                    <element signature="e#3587#3588#0" expanded="true" />
+                    <element signature="e#3689#3690#0" expanded="true" />
+                    <element signature="e#3725#3726#0" expanded="true" />
+                  </folding>
+                </state>
               </provider>
             </entry>
           </file>
@@ -463,12 +449,12 @@
       <workItem from="1522495867614" duration="2894000" />
       <workItem from="1522527796877" duration="3518000" />
       <workItem from="1522579388496" duration="1222000" />
-      <workItem from="1522601529706" duration="2310000" />
+      <workItem from="1522601529706" duration="3168000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="48749000" />
+    <option name="totallyTimeSpent" value="49607000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -898,17 +884,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Scene/Programs/Browser.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="18" column="78" lean-forward="false" selection-start-line="18" selection-start-column="78" selection-end-line="18" selection-end-column="78" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Scene/Programs/Profile.fxml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="18">
@@ -965,10 +940,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/LogInController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="31" column="48" lean-forward="true" selection-start-line="31" selection-start-column="48" selection-end-line="31" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cybermafia/Server.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="637">
+          <caret line="41" column="28" lean-forward="true" selection-start-line="41" selection-start-column="28" selection-end-line="41" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Scene/desktop.fxml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+        <state relative-caret-position="360">
+          <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -976,27 +967,27 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/cybermafia/Server.java">
+    <entry file="file://$PROJECT_DIR$/src/Scene/Programs/Browser.fxml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="32" column="13" lean-forward="false" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
+        <state relative-caret-position="324">
+          <caret line="18" column="78" lean-forward="false" selection-start-line="18" selection-start-column="78" selection-end-line="18" selection-end-column="78" />
           <folding />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/LogInController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="40" column="42" lean-forward="true" selection-start-line="40" selection-start-column="42" selection-end-line="40" selection-end-column="42" />
-          <folding />
-        </state>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/cybermafia/UserHandling.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="93" column="18" lean-forward="false" selection-start-line="93" selection-start-column="18" selection-end-line="93" selection-end-column="18" />
-          <folding />
+        <state relative-caret-position="206">
+          <caret line="14" column="63" lean-forward="false" selection-start-line="14" selection-start-column="63" selection-end-line="14" selection-end-column="63" />
+          <folding>
+            <element signature="e#3558#3559#0" expanded="true" />
+            <element signature="e#3587#3588#0" expanded="true" />
+            <element signature="e#3689#3690#0" expanded="true" />
+            <element signature="e#3725#3726#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

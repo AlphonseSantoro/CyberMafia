@@ -37,8 +37,8 @@ public class Server {
             userHandling.setPassword(password);
             sendSqlSelectStatementObject(host, portNumber, userHandling);
             UserHandling user = (UserHandling) objIn.readObject();
-            String fromServer = user.getAnswer();
-            if(fromServer.equals("true")){
+            boolean fromServer = user.getAnswer();
+            if(fromServer){
                 return true;
             }
         } catch (IOException | ClassNotFoundException e) {
