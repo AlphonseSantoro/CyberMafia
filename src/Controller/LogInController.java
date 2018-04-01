@@ -1,6 +1,7 @@
 package Controller;
 
 import cybermafia.Gui;
+import cybermafia.Player;
 import cybermafia.Server;
 import cybermafia.main;
 import javafx.fxml.FXML;
@@ -39,6 +40,7 @@ public class LogInController {
             } else if (server.validateUser(host, port, this.username.getText(), this.password.getText())) {
                 this.username.setText("");
                 this.password.setText("");
+                Player.setCurrentUser();
                 Gui.changeScene(Gui.getDesktop());
                 System.out.println("Log in successful...");
             } else {
