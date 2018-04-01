@@ -19,7 +19,7 @@ public class Server {
         objOut = new ObjectOutputStream(serverSocket.getOutputStream());
     }
 
-    public void sendSqlSelectStatementObject(String host, int portNumber, UserHandling object){
+    public void sendSqlSelectStatementObject(UserHandling object){
         try {
             String fromServer = in.readLine();
             System.out.println("From Server: " + fromServer);
@@ -29,21 +29,20 @@ public class Server {
         }
     }
 
-    public boolean validateUser(String host, int portNumber, String username, String password){
-        try {
+    public boolean validateUser(String username, String password) throws IOException, ClassNotFoundException {
             UserHandling userHandling = new UserHandling();
             userHandling.setValidate(true);
             userHandling.setUsername(username);
             userHandling.setPassword(password);
-            sendSqlSelectStatementObject(host, portNumber, userHandling);
+            sendSqlSelectStatementObject(userHandling);
             UserHandling user = (UserHandling) objIn.readObject();
-            boolean fromServer = user.getAnswer();
-            if(fromServer){
-                return true;
-            }
-        } catch (IOException | ClassNotFoundException e) {
-            e.printStackTrace();
-        }
-        return false;
+        return user.getAnswer();
+    }
+
+    public UserHandling loadUserProfile() throws IOException, ClassNotFoundException {
+        UserHandling userHandling = new UserHandling();
+        userHandling.setUsername(Player.getCurrentUser());
+        sendSqlSelectStatementObject(userHandling);
+        return (UserHandling) objIn.readObject();
     }
 }

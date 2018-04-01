@@ -7,7 +7,7 @@
           xmlns:fx="http://javafx.com/fxml"
           fx:controller="Controller.Programs.Profile"
           prefHeight="400.0" prefWidth="600.0">
-    <Text text="IP:"/> <Text text="0.0.0.0" fx:id="ipAdress"/>
+    <Text text="IP:"/> <Text text="0.0.0.0" fx:id="ipAddress"/>
     <Text text="CPU:"/> <Text text="1" fx:id="cpu"/>
     <Text text="GPU:"/> <Text text="1" fx:id="gpu"/>
     <Text text="HDD:"/> <Text text="1" fx:id="hdd"/>

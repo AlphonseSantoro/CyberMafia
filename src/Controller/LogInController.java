@@ -37,15 +37,20 @@ public class LogInController {
             Gui g = new Gui();
             if (server == null) {
                 g.showAlertBox("Error", "No connection to server.");
-            } else if (server.validateUser(host, port, this.username.getText(), this.password.getText())) {
-                this.username.setText("");
-                this.password.setText("");
-                Player.setCurrentUser();
-                Gui.changeScene(Gui.getDesktop());
-                System.out.println("Log in successful...");
             } else {
-                g.showAlertBox("Log In", "Wrong username or password");
-                System.out.println("Wrong username...");
+                try {
+                    if (server.validateUser(this.username.getText(), this.password.getText())) {
+                        Player.setCurrentUser(this.username.getText());
+                        this.username.setText("");
+                        this.password.setText("");
+                        Gui.changeScene(Gui.getDesktop());
+                    } else {
+                        g.showAlertBox("Log In", "Wrong username or password");
+                        System.out.println("Wrong username...");
+                    }
+                } catch (IOException | ClassNotFoundException e1) {
+                    e1.printStackTrace();
+                }
             }
         });
     }

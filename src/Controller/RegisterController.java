@@ -44,7 +44,7 @@ public class RegisterController {
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
-                server.sendSqlSelectStatementObject(host, port, userHandling);
+                server.sendSqlSelectStatementObject(userHandling);
                 username.setText("");
                 password.setText("");
                 confirmPassword.setText("");

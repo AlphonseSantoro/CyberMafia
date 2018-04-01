@@ -5,18 +5,18 @@ public class Player {
     private Crimes crime;
     private int cash, bank;
     private String userName, password;
-    private static int currentUser;
+    private static String currentUser;
 
     public Player(){
         userName = "";
         password = "";
     }
 
-    public static int getCurrentUser() {
+    public static String getCurrentUser() {
         return currentUser;
     }
 
-    public static void setCurrentUser(int currentUser) {
+    public static void setCurrentUser(String currentUser) {
         Player.currentUser = currentUser;
     }
 

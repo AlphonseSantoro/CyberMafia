@@ -15,7 +15,6 @@ import javafx.scene.layout.Pane;
 import jfxtras.scene.control.window.CloseIcon;
 import jfxtras.scene.control.window.MinimizeIcon;
 import jfxtras.scene.control.window.Window;
-import jfxtras.scene.control.window.WindowIcon;
 
 import java.io.IOException;
 
