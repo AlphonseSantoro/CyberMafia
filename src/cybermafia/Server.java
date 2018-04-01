@@ -5,7 +5,6 @@ import java.net.Socket;
 import java.sql.ResultSet;
 
 public class Server {
-    private ResultSet rs;
     private PrintWriter out;
     private BufferedReader in;
     private ObjectOutputStream objOut;
@@ -32,8 +31,6 @@ public class Server {
 
     public boolean validateUser(String host, int portNumber, String username, String password){
         try {
-            //String fromServer = in.readLine();
-            //System.out.println("From Server: " + fromServer);
             UserHandling userHandling = new UserHandling();
             userHandling.setValidate(true);
             userHandling.setUsername(username);
@@ -44,9 +41,7 @@ public class Server {
             if(fromServer.equals("true")){
                 return true;
             }
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (ClassNotFoundException e) {
+        } catch (IOException | ClassNotFoundException e) {
             e.printStackTrace();
         }
         return false;
