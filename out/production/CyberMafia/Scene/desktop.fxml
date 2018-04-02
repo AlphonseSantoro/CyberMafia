@@ -3,10 +3,17 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
 <BorderPane fx:id="borderPane" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="Controller.DesktopController" prefHeight="600.0" prefWidth="800.0">
     <center >
         <Pane fx:id="pane">
-
+            <ImageView fx:id="backgroundIM">
+                <Image url="/images/download.jpeg"/>
+            </ImageView>
+            <ImageView fx:id="desktopIM" onMouseClicked="#openProfile">
+                <Image url="/images/icons/computer.png"/>
+            </ImageView>
         </Pane>
     </center>
     <bottom>
