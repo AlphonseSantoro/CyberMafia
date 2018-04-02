@@ -7,6 +7,7 @@ CREATE TABLE user (
   password  VARCHAR(256),
   salt      VARCHAR(256),
   email     VARCHAR(256),
+  uptime	DATETIME,
   lastlogin DATETIME,
   CONSTRAINT username_pk
   PRIMARY KEY (username)
@@ -33,7 +34,6 @@ CREATE TABLE pc_hdd (
   name CHAR(30),
   size BIGINT
 );
-
 
 CREATE TABLE firewall (
   id       INT AUTO_INCREMENT NOT NULL,

@@ -1,17 +1,19 @@
 package Controller;
 
-import Controller.Programs.Profile;
-import cybermafia.Player;
+import cybermafia.Server;
+import cybermafia.main;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Group;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.MenuBar;
 import javafx.scene.control.MenuItem;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
+import javafx.scene.text.Text;
 import jfxtras.scene.control.window.CloseIcon;
 import jfxtras.scene.control.window.MinimizeIcon;
 import jfxtras.scene.control.window.Window;
@@ -23,10 +25,12 @@ public class DesktopController {
     @FXML Pane pane;
     @FXML ImageView backgroundIM, desktopIM;
     @FXML BorderPane borderPane;
-    private final Group group = new Group();
-    private static Profile profileController;
+    @FXML MenuBar menuBar;
+    @FXML Text clock;
 
-    public void initialize(){
+    private final Group group = new Group();
+
+    public void initialize() throws IOException {
         // Set background image
         backgroundIM.fitWidthProperty().bind(pane.widthProperty());
         backgroundIM.fitHeightProperty().bind(pane.heightProperty());
@@ -36,6 +40,8 @@ public class DesktopController {
         desktopIM.setLayoutY(10);
         // Add group to pane
         pane.getChildren().add(group);
+        Server server = new Server(main.getHost(), main.getPort());
+        clock.setText(server.getUptime());
     }
 
     @FXML

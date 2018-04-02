@@ -5,6 +5,8 @@
 
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.image.Image?>
+<?import javafx.scene.text.Text?>
+<?import javafx.geometry.Insets?>
 <BorderPane fx:id="borderPane" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="Controller.DesktopController" prefHeight="600.0" prefWidth="800.0">
     <center >
         <Pane fx:id="pane">
@@ -17,11 +19,19 @@
         </Pane>
     </center>
     <bottom>
-        <MenuBar>
-            <Menu text="Programs">
-                <MenuItem fx:id="textEditor" text="Text Editor" onAction="#openTextEditor"/>
-                <MenuItem fx:id="browser" text="Browser" onAction="#openBrowser"/>
-            </Menu>
-        </MenuBar>
+        <HBox spacing="10">
+            <MenuBar fx:id="menuBar">
+                <Menu text="Programs">
+                    <MenuItem fx:id="textEditor" text="Text Editor" onAction="#openTextEditor"/>
+                    <MenuItem fx:id="browser" text="Browser" onAction="#openBrowser"/>
+                </Menu>
+            </MenuBar>
+            <Region HBox.hgrow="ALWAYS"/>
+            <Text fx:id="clock" text="Clock">
+                <HBox.margin>
+                    <Insets bottom="5" left="10" top="7.5" right="10"/>
+                </HBox.margin>
+            </Text>
+        </HBox>
     </bottom>
 </BorderPane>

@@ -7,7 +7,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8b6c470c-475d-4d92-bf49-4dc5b436a5e9" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/DBCreateSkript.sql" afterPath="$PROJECT_DIR$/DBCreateSkript.sql" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/DesktopController.java" afterPath="$PROJECT_DIR$/src/Controller/DesktopController.java" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Programs/Browser.java" afterPath="$PROJECT_DIR$/src/Controller/Programs/Browser.java" />
+      <change beforePath="$PROJECT_DIR$/src/Scene/desktop.fxml" afterPath="$PROJECT_DIR$/src/Scene/desktop.fxml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -34,21 +37,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DBCreateSkript.sql" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/DBCreateSkript.sql">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="384">
-              <caret line="231" column="0" lean-forward="false" selection-start-line="231" selection-start-column="0" selection-end-line="231" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DesktopController.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="DesktopController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Controller/DesktopController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="366">
-              <caret line="56" column="14" lean-forward="false" selection-start-line="56" selection-start-column="14" selection-end-line="56" selection-end-column="14" />
+            <state relative-caret-position="468">
+              <caret line="43" column="38" lean-forward="false" selection-start-line="43" selection-start-column="38" selection-end-line="43" selection-end-column="38" />
               <folding />
             </state>
           </provider>
@@ -85,6 +78,19 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="desktop.fxml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Scene/desktop.fxml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="425">
+              <caret line="29" column="44" lean-forward="false" selection-start-line="29" selection-start-column="44" selection-end-line="29" selection-end-column="44" />
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="JavaFX-Scene-Builder">
+            <state />
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="Browser.fxml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Scene/Programs/Browser.fxml">
           <provider selected="true" editor-type-id="text-editor">
@@ -101,14 +107,14 @@
       <file leaf-file-name="Browser.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Controller/Programs/Browser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="366">
-              <caret line="23" column="22" lean-forward="true" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="22" />
+            <state relative-caret-position="474">
+              <caret line="30" column="35" lean-forward="false" selection-start-line="30" selection-start-column="35" selection-end-line="30" selection-end-column="35" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1124#1125#0" expanded="true" />
-                <element signature="e#1164#1165#0" expanded="true" />
-                <element signature="e#1231#1232#0" expanded="true" />
-                <element signature="e#1289#1290#0" expanded="true" />
+                <element signature="e#1168#1169#0" expanded="true" />
+                <element signature="e#1208#1209#0" expanded="true" />
+                <element signature="e#1275#1276#0" expanded="true" />
+                <element signature="e#1333#1334#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -200,15 +206,15 @@
         <option value="$PROJECT_DIR$/src/cybermafia/Player.java" />
         <option value="$PROJECT_DIR$/src/Controller/RegisterController.java" />
         <option value="$PROJECT_DIR$/src/Controller/LogInController.java" />
-        <option value="$PROJECT_DIR$/src/Scene/desktop.fxml" />
         <option value="$PROJECT_DIR$/src/cybermafia/UserHandling.java" />
         <option value="$PROJECT_DIR$/src/cybermafia/Server.java" />
         <option value="$PROJECT_DIR$/src/Scene/Programs/Browser.fxml" />
-        <option value="$PROJECT_DIR$/src/Controller/DesktopController.java" />
         <option value="$PROJECT_DIR$/src/Scene/Programs/Profile.fxml" />
         <option value="$PROJECT_DIR$/src/Controller/Programs/Profile.java" />
-        <option value="$PROJECT_DIR$/src/Controller/Programs/Browser.java" />
         <option value="$PROJECT_DIR$/DBCreateSkript.sql" />
+        <option value="$PROJECT_DIR$/src/Controller/Programs/Browser.java" />
+        <option value="$PROJECT_DIR$/src/Scene/desktop.fxml" />
+        <option value="$PROJECT_DIR$/src/Controller/DesktopController.java" />
       </list>
     </option>
   </component>
@@ -470,12 +476,12 @@
       <workItem from="1522527796877" duration="3518000" />
       <workItem from="1522579388496" duration="1222000" />
       <workItem from="1522601529706" duration="16229000" />
-      <workItem from="1522661932621" duration="9824000" />
+      <workItem from="1522661932621" duration="17796000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="72492000" />
+    <option name="totallyTimeSpent" value="80464000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -499,8 +505,8 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32984293" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2984293" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30575916" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2984293" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30575916" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19173554" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -598,8 +604,8 @@
         <state relative-caret-position="414">
           <caret line="31" column="41" lean-forward="false" selection-start-line="31" selection-start-column="41" selection-end-line="31" selection-end-column="41" />
           <folding>
-            <element signature="e#2018#2019#0" expanded="true" />
-            <element signature="e#2104#2105#0" expanded="true" />
+            <element signature="e#2018#2019#0" expanded="false" />
+            <element signature="e#2104#2105#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -626,8 +632,8 @@
         <state relative-caret-position="414">
           <caret line="31" column="41" lean-forward="false" selection-start-line="31" selection-start-column="41" selection-end-line="31" selection-end-column="41" />
           <folding>
-            <element signature="e#2018#2019#0" expanded="true" />
-            <element signature="e#2104#2105#0" expanded="true" />
+            <element signature="e#2018#2019#0" expanded="false" />
+            <element signature="e#2104#2105#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -696,8 +702,8 @@
         <state relative-caret-position="594">
           <caret line="41" column="47" lean-forward="false" selection-start-line="41" selection-start-column="47" selection-end-line="41" selection-end-column="47" />
           <folding>
-            <element signature="e#2018#2019#0" expanded="true" />
-            <element signature="e#2104#2105#0" expanded="true" />
+            <element signature="e#2018#2019#0" expanded="false" />
+            <element signature="e#2104#2105#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -742,8 +748,8 @@
         <state relative-caret-position="360">
           <caret line="28" column="19" lean-forward="false" selection-start-line="28" selection-start-column="16" selection-end-line="28" selection-end-column="19" />
           <folding>
-            <element signature="e#2018#2019#0" expanded="true" />
-            <element signature="e#2104#2105#0" expanded="true" />
+            <element signature="e#2018#2019#0" expanded="false" />
+            <element signature="e#2104#2105#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -878,24 +884,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Scene/desktop.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="13" column="70" lean-forward="false" selection-start-line="13" selection-start-column="70" selection-end-line="13" selection-end-column="70" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Controller/LogInController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="810">
           <caret line="54" column="11" lean-forward="false" selection-start-line="54" selection-start-column="11" selection-end-line="54" selection-end-column="11" />
           <folding>
-            <element signature="e#2018#2019#0" expanded="true" />
-            <element signature="e#2104#2105#0" expanded="true" />
+            <element signature="e#2018#2019#0" expanded="false" />
+            <element signature="e#2104#2105#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -913,6 +908,81 @@
         <state relative-caret-position="1314">
           <caret line="86" column="4" lean-forward="false" selection-start-line="86" selection-start-column="4" selection-end-line="89" selection-end-column="5" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cybermafia/Player.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" column="37" lean-forward="false" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Scene/Programs/Profile.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" column="52" lean-forward="false" selection-start-line="7" selection-start-column="52" selection-end-line="7" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/java-9-oracle/lib/src.zip!/javafx.fxml/javafx/fxml/FXMLLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="2263" column="0" lean-forward="false" selection-start-line="2263" selection-start-column="0" selection-end-line="2263" selection-end-column="0" />
+          <folding>
+            <element signature="e#86646#86647#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/Programs/Profile.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="474">
+          <caret line="41" column="12" lean-forward="false" selection-start-line="41" selection-start-column="8" selection-end-line="41" selection-end-column="12" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#573#574#0" expanded="true" />
+            <element signature="e#612#613#0" expanded="true" />
+            <element signature="e#651#652#0" expanded="true" />
+            <element signature="e#692#693#0" expanded="true" />
+            <element signature="e#737#738#0" expanded="true" />
+            <element signature="e#769#770#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DBCreateSkript.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="535">
+          <caret line="231" column="8" lean-forward="true" selection-start-line="231" selection-start-column="8" selection-end-line="231" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cybermafia/Server.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="864">
+          <caret line="50" column="41" lean-forward="false" selection-start-line="50" selection-start-column="10" selection-end-line="50" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/Programs/Browser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="474">
+          <caret line="30" column="35" lean-forward="false" selection-start-line="30" selection-start-column="35" selection-end-line="30" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1168#1169#0" expanded="true" />
+            <element signature="e#1208#1209#0" expanded="true" />
+            <element signature="e#1275#1276#0" expanded="true" />
+            <element signature="e#1333#1334#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -956,26 +1026,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/cybermafia/Player.java">
+    <entry file="file://$PROJECT_DIR$/src/Scene/desktop.fxml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" column="37" lean-forward="false" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/DesktopController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="366">
-          <caret line="56" column="14" lean-forward="false" selection-start-line="56" selection-start-column="14" selection-end-line="56" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Scene/Programs/Profile.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" column="52" lean-forward="false" selection-start-line="7" selection-start-column="52" selection-end-line="7" selection-end-column="52" />
+        <state relative-caret-position="425">
+          <caret line="29" column="44" lean-forward="false" selection-start-line="29" selection-start-column="44" selection-end-line="29" selection-end-column="44" />
           <folding />
         </state>
       </provider>
@@ -983,58 +1037,10 @@
         <state />
       </provider>
     </entry>
-    <entry file="jar:///usr/lib/jvm/java-9-oracle/lib/src.zip!/javafx.fxml/javafx/fxml/FXMLLoader.java">
+    <entry file="file://$PROJECT_DIR$/src/Controller/DesktopController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="2263" column="0" lean-forward="false" selection-start-line="2263" selection-start-column="0" selection-end-line="2263" selection-end-column="0" />
-          <folding>
-            <element signature="e#86646#86647#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/Programs/Profile.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="474">
-          <caret line="41" column="12" lean-forward="false" selection-start-line="41" selection-start-column="8" selection-end-line="41" selection-end-column="12" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#573#574#0" expanded="true" />
-            <element signature="e#612#613#0" expanded="true" />
-            <element signature="e#651#652#0" expanded="true" />
-            <element signature="e#692#693#0" expanded="true" />
-            <element signature="e#737#738#0" expanded="true" />
-            <element signature="e#769#770#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/Programs/Browser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="366">
-          <caret line="23" column="22" lean-forward="true" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1124#1125#0" expanded="true" />
-            <element signature="e#1164#1165#0" expanded="true" />
-            <element signature="e#1231#1232#0" expanded="true" />
-            <element signature="e#1289#1290#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cybermafia/Server.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="864">
-          <caret line="50" column="41" lean-forward="false" selection-start-line="50" selection-start-column="10" selection-end-line="50" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DBCreateSkript.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="231" column="0" lean-forward="false" selection-start-line="231" selection-start-column="0" selection-end-line="231" selection-end-column="0" />
+        <state relative-caret-position="468">
+          <caret line="43" column="38" lean-forward="false" selection-start-line="43" selection-start-column="38" selection-end-line="43" selection-end-column="38" />
           <folding />
         </state>
       </provider>
