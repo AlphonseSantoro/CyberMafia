@@ -62,8 +62,7 @@ CREATE TABLE player (
   CONSTRAINT username_pk
   PRIMARY KEY (username),
   CONSTRAINT username_fk
-  FOREIGN KEY (username) REFERENCES user (username)
-  /*
+  FOREIGN KEY (username) REFERENCES user (username),
   constraint pc_cpu_id_fk
   foreign key (pc_cpu_id) references pc_cpu(id),
   constraint pc_gpu_id_fk
@@ -73,7 +72,7 @@ CREATE TABLE player (
   constraint fw_id_fk
   foreign key (firewall) references firewall(id),
   constraint bd_id_fk
-  foreign key (backdoor) references backdoor(id) */
+  foreign key (backdoor) references backdoor(id)
 );
 
 CREATE TABLE npc (
@@ -228,3 +227,27 @@ VALUES  ('BitStorinator I', 10),
   ('GigaStorinator VIII', 80),
   ('GigaStorinator IX', 90),
   ('GigaStorinator X', 100);
+
+INSERT INTO firewall (name, security)
+VALUES	('BitDefender', 100),
+  ('ByteDefender', 200),
+  ('MegaDefender', 300),
+  ('GigaDefender', 400),
+  ('TerraDefender', 500),
+  ('PetaDefender', 600),
+  ('ExaDefender', 700),
+  ('ZettaDefender', 800),
+  ('ZottaDefender', 900),
+  ('BrontoDefender', 1000);
+
+INSERT INTO backdoor (name, power)
+VALUES	('BitAttacker', 100),
+  ('ByteAttacker', 200),
+  ('MegaAttacker', 300),
+  ('GigaAttacker', 400),
+  ('TerraAttacker', 500),
+  ('PetaAttacker', 600),
+  ('ExaAttacker', 700),
+  ('ZettaAttacker', 800),
+  ('ZottaAttacker', 900),
+  ('BrontoAttacker', 1000);

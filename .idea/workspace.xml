@@ -6,7 +6,9 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8b6c470c-475d-4d92-bf49-4dc5b436a5e9" name="Default" comment="" />
+    <list default="true" id="8b6c470c-475d-4d92-bf49-4dc5b436a5e9" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/DBCreateSkript.sql" afterPath="$PROJECT_DIR$/DBCreateSkript.sql" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -35,8 +37,8 @@
       <file leaf-file-name="DBCreateSkript.sql" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/DBCreateSkript.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="403">
-              <caret line="198" column="35" lean-forward="true" selection-start-line="198" selection-start-column="35" selection-end-line="198" selection-end-column="35" />
+            <state relative-caret-position="384">
+              <caret line="231" column="0" lean-forward="false" selection-start-line="231" selection-start-column="0" selection-end-line="231" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -468,12 +470,12 @@
       <workItem from="1522527796877" duration="3518000" />
       <workItem from="1522579388496" duration="1222000" />
       <workItem from="1522601529706" duration="16229000" />
-      <workItem from="1522661932621" duration="8229000" />
+      <workItem from="1522661932621" duration="9824000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="70897000" />
+    <option name="totallyTimeSpent" value="72492000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1031,8 +1033,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/DBCreateSkript.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="403">
-          <caret line="198" column="35" lean-forward="true" selection-start-line="198" selection-start-column="35" selection-end-line="198" selection-end-column="35" />
+        <state relative-caret-position="384">
+          <caret line="231" column="0" lean-forward="false" selection-start-line="231" selection-start-column="0" selection-end-line="231" selection-end-column="0" />
           <folding />
         </state>
       </provider>
