@@ -43,7 +43,7 @@ public class LogInController {
                         Player.setCurrentUser(this.username.getText());
                         this.username.setText("");
                         this.password.setText("");
-                        Gui.changeScene(Gui.getDesktop());
+                        Gui.changeScene(g.createScene(800, 600, "../Scene/desktop.fxml"));
                     } else {
                         g.showAlertBox("Log In", "Wrong username or password");
                         System.out.println("Wrong username...");

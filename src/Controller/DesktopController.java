@@ -1,5 +1,6 @@
 package Controller;
 
+import cybermafia.Player;
 import cybermafia.Server;
 import cybermafia.main;
 import javafx.fxml.FXML;
@@ -30,7 +31,7 @@ public class DesktopController {
 
     private final Group group = new Group();
 
-    public void initialize() throws IOException {
+    public void initialize() throws IOException, ClassNotFoundException {
         // Set background image
         backgroundIM.fitWidthProperty().bind(pane.widthProperty());
         backgroundIM.fitHeightProperty().bind(pane.heightProperty());
@@ -41,7 +42,7 @@ public class DesktopController {
         // Add group to pane
         pane.getChildren().add(group);
         Server server = new Server(main.getHost(), main.getPort());
-        clock.setText(server.getUptime());
+        clock.setText(server.getUpTime(Player.getCurrentUser()).getRunTime());
     }
 
     @FXML

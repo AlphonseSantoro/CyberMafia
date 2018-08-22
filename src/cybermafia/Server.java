@@ -51,4 +51,11 @@ public class Server {
         sendSqlSelectStatementObject(userHandling);
         return (UserHandling) objIn.readObject();
     }
+
+    public UserHandling getUpTime(String username) throws IOException, ClassNotFoundException {
+        userHandling.setUpTime(true);
+        userHandling.setUsername(username);
+        sendSqlSelectStatementObject(userHandling);
+        return (UserHandling) objIn.readObject();
+    }
 }

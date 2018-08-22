@@ -7,7 +7,6 @@ CREATE TABLE user (
   password  VARCHAR(256),
   salt      VARCHAR(256),
   email     VARCHAR(256),
-  uptime	DATETIME,
   lastlogin DATETIME,
   CONSTRAINT username_pk
   PRIMARY KEY (username)
@@ -54,6 +53,7 @@ CREATE TABLE backdoor (
 CREATE TABLE player (
   username  VARCHAR(20),
   playerip  CHAR(19),
+  uptime	DATETIME,
   pc_cpu_id INT,
   pc_gpu_id INT,
   pc_hdd_id INT,

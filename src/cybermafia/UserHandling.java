@@ -9,8 +9,8 @@ import java.sql.ResultSet;
 
 public class UserHandling implements Serializable{
     private static final long serialVersionUID = 1L; // Needed to de-Serialize object, class on server-side and client-side have same UID.
-    private boolean select, execute, validate, register, answer, profile, url;
-    private String username, password, email, ip, cpu, gpu, hdd;
+    private boolean select, execute, validate, register, answer, profile, url, upTime;
+    private String username, password, email, ip, cpu, gpu, hdd, runTime;
     private ResultSet resultSet; // Contains table from a query
 
 
@@ -253,5 +253,21 @@ public class UserHandling implements Serializable{
      */
     public void setIPadress(boolean url) {
         this.url = url;
+    }
+
+    public boolean getUpTime() {
+        return upTime;
+    }
+
+    public void setUpTime(boolean upTime) {
+        this.upTime = upTime;
+    }
+
+    public String getRunTime() {
+        return runTime;
+    }
+
+    public void setRunTime(String runTime) {
+        this.runTime = runTime;
     }
 }
